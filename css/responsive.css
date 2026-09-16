@@ -1,730 +1,376 @@
+/*350*/
 @media (max-width: 1300px) {
 
-    html,
-    body {
-        max-width: 100%;
-        overflow-x: hidden;
-    }
 
-    .container {
-        width: calc(100% - 40px);
-    }
+header nav .container-nav .links ul{
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;   
+    height: 0%;  
+    background: #111;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    z-index: 1000;
+   overflow: hidden;
+   transition-duration: .3s;
+    padding: 0px;
+}
 
-    img {
-        max-width: 100%;
-    }
+header nav .container-nav .links ul li{
+    padding: 0px;
+}
 
-    header {
-        background-position: center center;
-    }
+ header nav .container-nav .links .Burger{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+ }
+ header nav .container-nav .links .Burger span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+ }
+header nav .container-nav .links #items:checked ~ ul{
+    height: 430px;
+    padding:15px 0px;
+}
 
-    header nav .logo {
-        margin-left: 20px;
-    }
+ header nav .container-nav .logo h2{
+    font-size: 30px;
+}
+header .container .content h1{
+    font-size: 35px;
+}
+header .container .content h2{
+    font-size: 20px;
+}
+#ABOUT .container .part1,
+#ABOUT .container .part2{
+    width: 100%;
+}
+#ABOUT .container .part1 h2{
+    font-size: 30px;
+}
+#ABOUT .container .part2 img{
+    width: 85%;
+    margin-top: 20px;
+}
+#SERVICES .container .boxs{
+    flex-direction: column;
+}
+#SERVICES .container .boxs .item {
+    width: 100%;
 
-    header nav .logo h1 {
-        font-size: 30px !important;
-    }
+}
+#SERVICES .container .boxs .icon{
+    width: 100%;
+     order: -1;
+}
+#SERVICES .container .head h2{
+    font-size: 30px;
+}
+#SERVICES .container .boxs .item h3{
+    font-size: 25px;
+}
+#SERVICES .container .boxs .icon i{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+#CLIENTS .container .box .part {
+    width: 100%;
+}
+#CLIENTS .container .head h2{
+    font-size: 30px;
+}
+#CLIENTS .container .box .part h4{
+    font-size:20px ;
+}
+#TRAINERS .container .card {
+    width: 100%;
+}
+#GALLERY .container .head h2{
+    font-size: 25px;
+}
+#GALLERY .container .content{
+     height:2500px;
+         grid-template-rows: repeat(7,1fr);
+         grid-template-columns: 1fr;
+}
+#GALLERY .container .content .item{
+    grid-row: auto !important ;
+    grid-column: auto !important;
+}
+#CONTACT .icons{
+   flex-direction: column;
+}
+#CONTACT .icons .box{
+    margin: 10px 0px;
+}
+#CONTACT .head h2{
+    font-size: 25px;
+}
+#CONTACT form{
+    flex-direction: column;
+}
+#CONTACT form .part{
+    width: 100%;
+}
+#CONTACT form .part input{
+    margin: 10px 0px;
+}
+#CONTACT form button{
+    width: fit-content;
+}
+footer .links{
+    width:100%;
+}
+.posts{
+    width:100%;
+}
+footer .images{
+    display:grid;
+    grid-template-columns:repeat(1,auto);
+    gap:10px;
+}
+.images img{
+    width:100%;
+    height:100%;
+}
+.footer-time{
+    width:100%;
+}
+.footer-time h5{
+    margin-top: 30px;
+}
+}
 
-    header nav .links {
-        margin-right: 20px;
-    }
 
-    header .burger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        width: 30px;
-        height: 22px;
-        cursor: pointer;
-        z-index: 100;
 
-    }
 
-    header .burger span {
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-    }
 
-    header nav .links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #000;
-        z-index: 99;
-        margin: 0;
-    }
 
-    header .burger:focus+.links {
-        display: block;
-    }
-
-    header nav .links ul {
-        display: block;
-        width: 100%;
-        text-align: center;
-        list-style: none;
-    }
-
-    header nav .links ul li {
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 12px 0;
-    }
-
-    header nav .links ul li a {
-        display: block;
-        width: 100%;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    header .content {
-        margin-left: 0;
-    }
-
-    #About .box .content {
-        margin-left: 0;
-    }
-
-    #About .box .img img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    #service {
-        height: auto;
-    }
-
-    #service .box .content {
-        margin-left: 0 !important;
-    }
-
-    #service .box .img {
-        margin-right: 0 !important;
-    }
-
-    #service .box .content p {
-        overflow-wrap: break-word;
-    }
-
-    #client .box .part:nth-last-of-type(1),
-    #client .box .part:nth-last-of-type(2) {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    #client .box .part p {
-        overflow-wrap: break-word;
-        text-align: center;
-    }
-
-    #Trainers .box .card {
-        min-width: 0;
-    }
-
-    #Trainers .box .card img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    #Trainers .box .card p {
-        overflow-wrap: break-word;
-    }
-
-    #Gallery .box .part {
-        min-width: 0;
-        overflow: hidden;
-    }
-
-    #Gallery .box .part img {
-        max-width: 100%;
-        width: 100%;
-        height: auto !important;
-        object-fit: cover;
-    }
-
-    /* #Gallery .box .part:nth-of-type(2) img:nth-of-type(2){
-    height: 455px;
-    width: 350px;
+/*450*/
+@media (min-width: 371px) and (max-width: 1300px) {
+header .container .content h1{
+    font-size: 45px;
+}
+header .container .content h2{
+    font-size: 25px;
+}
+#SERVICES .container .boxs .item {
+    width: 65%;
+    margin: auto;
+}
+#SERVICES .container .boxs .item h3{
+    font-size: 20px;
+}
+#TRAINERS .container .card .item{
+    width:280px;
+    margin: auto;
+}
+}
+/*650*/
+@media (min-width: 577px) and (max-width: 1300px) {
+ header nav .container-nav .logo h2{
     
-}*/
-    #Gallery .box .part:nth-of-type(1) img:nth-of-type(2) {
-        height: 138px !important;
-    }
-
-    iframe {
-        display: block;
-        max-width: 100%;
-    }
-
-    #Contact .box .part,
-    #Contact .box .input,
-    #Contact .box .textarea {
-        min-width: 0;
-    }
-
-    #Contact .box input,
-    #Contact .box textarea {
-        max-width: 100%;
-    }
-
-    footer {
-        max-width: 100%;
-    }
-
-    footer .box .part,
-    footer .box .posts .img {
-        min-width: 0;
-    }
-
-    footer .box .posts .img img {
-        max-width: 100%;
-        height: auto;
-    }
+    font-size: 40px;
+   
+}
+header .container .content h2{
+    font-size: 40px;
+}
+#ABOUT .container .part2 img{
+    width: 65%;
+}
+#CLIENTS .container .box .part h4{
+    font-size:25px ;
+}
+.head h2{
+    font-size: 30px;
+}
+#TRAINERS .container .card .item h4{
+    font-size: 20px;
+  
+}
+#TRAINERS .container .card .item h5{
+    font-size: 15px;
+    
+}
+.posts{
+    width:90%;
+}
+footer .images{
+    display:grid;
+    grid-template-columns:repeat(3,auto);
+    gap:20px;
+    margin: 0px auto;
+}
+.images img{
+    width:100%;
+    height:100%;
+}
+.footer-time{
+    width:70%;
+}
+}
+/*850*/
+@media (min-width: 769px) and (max-width: 1300px) {
+#ABOUT .container .part1,
+#ABOUT .container .part2{
+    width:50%;
+}
+#SERVICES .container .boxs {
+    display: flex;
+    flex-direction:row-reverse;
+}
+#SERVICES .container .boxs:nth-of-type(3){
+    display: flex;
+    flex-direction: row;
+}
+#SERVICES .container .boxs .item {
+    width: 65%;
+}
+#SERVICES .container .boxs .icon{
+    width: 35%;
+}
+#CLIENTS .container .box .part {
+    width: 50%;
+}
+#CLIENTS .container .head h2{
+    font-size: 40px;
+}
+#CLIENTS .container .box .part p{
+      width: 90%;
+}
+#TRAINERS .container .card {
+    width: 50%;
+}
+.head h2{
+    font-size: 40px;
+}
+#TRAINERS .container .card .item h4{
+    font-size: 25px;
+  
+}
+#TRAINERS .container .card .item h5{
+    font-size: 18px;
+    
+}
+#GALLERY .container .head h2{
+    font-size: 30px;
+}
+#GALLERY .container .content{
+     height: 900px;
+         grid-template-rows: repeat(3,auto);
+         grid-template-columns:repeat(3,auto);
+}
+#GALLERY .container .content .item:nth-of-type(1){
+    grid-row: 1/3 !important;
+}
+#GALLERY .container .content .item:nth-of-type(2){
+    grid-row:3/4 !important;
+}
+#GALLERY .container .content .item:nth-of-type(3){
+    grid-row: 2/3 !important;
+    grid-column: 3/4 !important;
+}
+#GALLERY .container .content .item:nth-of-type(4){
+    grid-column: 3/4 !important;
+}
+#GALLERY .container .content .item:nth-of-type(5){
+    grid-row: 1/2 !important;
+}
+#GALLERY .container .content .item:nth-of-type(6){
+    grid-row: 2/4 !important;
+}
+#CONTACT .icons{
+   flex-direction: row;
+}
+#CONTACT .icons .box{
+    margin: 10px 0px;
+}
+#CONTACT .head h2{
+    font-size: 30px;
+}
+#CONTACT form{
+    flex-direction: row;
+}
+#CONTACT form .part{
+    width: 30%;
+}
+#CONTACT form button{
+    width: fit-content;
+}
+}
+/*1050*/
+@media (min-width: 992px) and (max-width: 1300px) {
+#ABOUT .container .part1 h2{
+    font-size: 40px;
+}
+#ABOUT .container .part2 img{
+    width: 85%;
+}
+#SERVICES .container .head h2{
+    font-size: 40px;
+}
+#SERVICES .container .boxs .item h3{
+    font-size: 30px;
+}
+#CLIENTS .container .box .part p{
+      width: 78%;
+}
+#TRAINERS .container .card{
+    width: 25%;
+}
+#TRAINERS .container .card .item {
+      width:initial;
+      margin: auto;
+}
+#TRAINERS .container .card .item{
+  
+    margin-inline: 20px;
+}
+#GALLERY .container .head h2{
+    font-size: 40px;
+}
+#CONTACT form .part{
+    width: 32%;
+    
+}
+footer .links{
+    width:25%;
+}
+.posts{
+    width:30%;
+}
+footer .images{
+    display:grid;
+    grid-template-columns:repeat(3,auto);
+    gap:10px;
+}
+.images img{
+    width:100%;
+    height:80px;
+}
+.footer-time{
+    width:30%;
 }
 
-@media (max-width: 1050px) {
-
-    header nav .logo h1 {
-        font-size: 45px;
-    }
-
-    header nav .links ul li {
-        font-size: 15px;
-        margin-right: 7px;
-    }
-
-    header .content h1 {
-        font-size: 55px;
-    }
-
-    header .content h3 {
-        font-size: 36px;
-    }
-
-    #About .box {
-        gap: 30px;
-        align-items: center;
-    }
-
-    #About .box .content {
-        width: 55%;
-        margin-top: 80px;
-    }
-
-    #About .box .img {
-        width: 45%;
-    }
-
-    #About .box .content h2 {
-        font-size: 36px;
-    }
-
-    #About .box .content p {
-        line-height: 27px;
-    }
-
-    #service .box {
-        gap: 25px;
-    }
-
-    #service .box .content {
-        width: 75%;
-    }
-
-    #service .box .img {
-        width: 25%;
-    }
-
-    #service .box .content h3 {
-        font-size: 25px;
-    }
-
-    #service .box .content p {
-        line-height: 24px;
-    }
-
-    #service .box .img i {
-        width: 90px;
-        height: 90px;
-        font-size: 32px;
-    }
-
-    #client .box {
-        gap: 30px;
-    }
-
-    #client .box .part {
-        width: 50%;
-    }
-
-    #client .box .part p {
-        line-height: 27px;
-    }
-
-    #Trainers .box {
-        gap: 10px;
-    }
-
-    #Trainers .box .card {
-        width: 25%;
-        margin: 0 5px;
-        padding: 25px 10px;
-    }
-
-    #Trainers .box .card img {
-        width: 130px;
-        height: 130px;
-        object-fit: cover;
-    }
-
-    #Trainers .box .card p {
-        line-height: 25px;
-    }
-
-    #Gallery .box .part:nth-of-type(2) img:nth-of-type(2),
-    #Gallery .box .part:nth-of-type(3) img:nth-of-type(3) {
-        width: 100%;
-        height: auto !important;
-    }
-
-    #Contact .box .part,
-    #Contact .box .input {
-        width: 33.333%;
-    }
-
-    footer .box .part {
-        width: 33.333%;
-    }
-
-    footer .box .posts>.item {
-        width: 95%;
-    }
 }
+/*1250*/
+@media (min-width: 1181px) and (max-width: 1300px) {
 
-@media (max-width: 850px) {
-
-    .container {
-        width: calc(100% - 30px);
-    }
-
-    header .content h1 {
-        font-size: 48px;
-    }
-
-    header .content h3 {
-        font-size: 32px;
-    }
-
-    header nav .logo h1 {
-        font-size: 40px;
-    }
-
-    header nav .links ul li {
-        font-size: 13px;
-        margin-right: 5px;
-    }
-
-    #About .box {
-        gap: 25px;
-    }
-
-    #About .box .content {
-        margin-top: 50px;
-    }
-
-    #About .box .content h2 {
-        font-size: 32px;
-    }
-
-    #About .box .content p {
-        font-size: 14px;
-        line-height: 25px;
-    }
-
-    #service h2 {
-        font-size: 36px;
-    }
-
-    #service .box {
-        gap: 15px;
-    }
-
-    #service .box .content {
-        width: 75%;
-    }
-
-    #service .box .img {
-        width: 25%;
-    }
-
-    #service .box .content h3 {
-        font-size: 23px;
-    }
-
-    #service .box .content p {
-        font-size: 14px;
-        line-height: 22px;
-    }
-
-    #service .box .img i {
-        width: 80px;
-        height: 80px;
-        font-size: 30px;
-    }
-
-    #client h2,
-    #Trainers h2,
-    #Gallery h2,
-    #Contact h2 {
-        font-size: 36px;
-    }
-
-    #client .box .part p {
-        font-size: 14px;
-        line-height: 25px;
-    }
-
-    #Trainers {
-        padding: 40px 20px;
-    }
-
-    #Trainers .box {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    #Trainers .box .card {
-        width: calc(50% - 10px);
-        margin: 0;
-        padding: 25px 12px;
-    }
-
-    #Trainers .box .card img {
-        width: 130px;
-        height: 130px;
-    }
-
-    #Trainers .box .card p {
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    #Gallery .box .part:nth-of-type(2) img:nth-of-type(2),
-    #Gallery .box .part:nth-of-type(3) img:nth-of-type(3) {
-        width: 100%;
-        height: auto !important;
-    }
-
-    iframe {
-        height: 350px;
-    }
-
-    #Contact .box .part,
-    #Contact .box .input {
-        width: 33.333%;
-    }
-
-    footer .box {
-        gap: 25px 0;
-    }
-
-    footer .box .part,
-    footer .box .posts {
-        width: 50%;
-    }
-
-    footer .box .posts>.item {
-        width: 100%;
-    }
-}
-
-@media (max-width: 450px) {
-
-    .container {
-        width: calc(100% - 20px);
-    }
-
-    header {
-        min-height: 600px;
-        background-size: cover;
-        background-position: center center;
-    }
-
-    header nav .logo {
-        margin: 18px 15px;
-    }
-
-    header nav .logo h1 {
-        font-size: 30px;
-    }
-
-    header .burger {
-        top: 23px;
-        right: 15px;
-        width: 32px;
-        height: 23px;
-    }
-
-    header nav .links {
-        top: 70px;
-    }
-
-    header nav .links ul li {
-        font-size: 13px;
-        padding: 11px 0;
-    }
-
-    header .content {
-        padding: 0 10px;
-    }
-
-    header .content h1 {
-        font-size: 31px;
-        letter-spacing: 1px;
-    }
-
-    header .content h3 {
-        font-size: 23px;
-    }
-
-    header .content button {
-        padding: 9px 18px;
-        font-size: 14px;
-    }
-
-    #About,
-    #service,
-    #client,
-    #Gallery,
-    #Contact {
-        padding: 40px 0;
-    }
-
-    #About .box .content h2 {
-        font-size: 29px;
-    }
-
-    #About .box .content p,
-    #service .box .content p,
-    #client .box .part p {
-        font-size: 14px;
-        line-height: 23px;
-        overflow-wrap: break-word;
-    }
-
-    #About .box .img img {
-        width: 100%;
-        height: auto;
-    }
-
-    #service h2,
-    #client h2,
-    #Trainers h2,
-    #Gallery h2,
-    #Contact h2 {
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
-
-    #service .box {
-        margin-bottom: 40px;
-    }
-
-    #service .box .content h3 {
-        font-size: 21px;
-    }
-
-    #service .box .content button {
-        padding: 9px 18px;
-    }
-
-    #service .box .img i {
-        width: 90px;
-        height: 90px;
-    }
-
-    #client .box {
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    #client .box .part {
-        width: 100%;
-        margin: 0 !important;
-    }
-
-    #client .box .part h3 {
-        margin: 15px 0;
-    }
-
-    #Trainers {
-        padding: 50px 0;
-    }
-
-    #Trainers .box {
-        gap: 20px;
-    }
-
-    #Trainers .box .card {
-        width: calc(50% - 10px);
-        margin: 0;
-    }
-
-    #Trainers .box .card img {
-        width: 130px;
-        height: 130px;
-        object-fit: cover;
-    }
-
-    #Trainers .box .card p {
-        font-size: 14px;
-        line-height: 23px;
-    }
-
-    #Trainers .box .card span {
-        font-size: 18px;
-    }
-
-    #Gallery .box {
-        flex-wrap: wrap;
-    }
-
-    #Gallery .box .part {
-        width: 50%;
-    }
-
-    #Gallery .box .part:nth-of-type(3) {
-        width: 100%;
-    }
-
-    #Gallery .box .part img {
-        width: 100%;
-        max-width: 100%;
-        height: auto !important;
-    }
-
-    iframe {
-        width: 100%;
-        height: 350px;
-    }
-
-    #Contact .box .part,
-    #Contact .box .input {
-        width: 100%;
-    }
-
-    #Contact .box .input {
-        margin-bottom: 25px;
-    }
-
-    #Contact .box .input .item,
-    #Contact .box .textarea .item {
-        margin: 0;
-    }
-
-    #Contact .box input,
-    #Contact .box textarea {
-        width: 100%;
-    }
-
-    #Contact .box textarea {
-        height: 120px;
-    }
-
-    #Contact form button {
-        width: 100%;
-        float: none;
-        padding: 10px 20px;
-    }
-
-    footer {
-        padding-top: 35px;
-    }
-
-    footer h2 {
-        margin-bottom: 20px;
-    }
-
-    footer .box {
-        gap: 35px 0;
-    }
-
-    footer .box>.part,
-    footer .box .posts {
-        width: 100%;
-    }
-
-    footer .box .posts>.item {
-        width: 100%;
-    }
-
-    footer .box .posts .img {
-        width: 33.333%;
-    }
-
-    footer .box .times .day,
-    footer .box .times .time {
-        font-size: 14px;
-    }
-
-    footer .footer {
-        padding: 0 10px;
-    }
-
-    footer .footer p {
-        font-size: 13px;
-        line-height: 21px;
-        overflow-wrap: break-word;
-    }
-
-    footer .footer .socialMedia {
-        margin: 15px 0;
-    }
-
-    #backhome {
-        right: 10px;
-        bottom: 10px;
-    }
-
-    #backhome img {
-        max-width: 35px;
-    }
-}
-
-@media (max-width: 350px) {
-
-    .container {
-        width: calc(100% - 16px);
-    }
-
-    header {
-        min-height: 100vh;
-        height: 100vh;
-    }
-
-    header nav .logo {
-        margin: 15px 10px;
-    }
-
-    header nav .logo h1 {
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
-
-    header .burger {
-        top: 20px;
-        right: 10px;
-        width: 30px;
-        height: 21;
-    }
 }
